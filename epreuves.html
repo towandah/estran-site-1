@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Les épreuves — Trail de l'Estran</title>
+  <meta name="description"
+    content="Découvrez les épreuves du Trail de l'Estran : L'Estran 32km, La Bernique 14km, La Crevette 8km.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body class="is-preload" data-page="epreuves">
+
+  <!-- Nav (injecté par components/nav.js) -->
+  <nav id="nav"></nav>
+
+  <!-- Hero -->
+  <section id="top" class="epreuves-hero">
+    <div class="inner">
+      <h1>Les épreuves</h1>
+      <p>
+        Le Trail de l'Estran vous offre des parcours uniques entre GR34 et estran&nbsp;!
+        La Bretagne comme vous l'aimez, ou comme vous l'imaginez&nbsp;!
+        Des terrains techniques au bord et sur la mer&nbsp;!
+        Et dépêchez-vous, car la marée monte&nbsp;!
+      </p>
+      <ul class="actions special">
+        <li><a href="#estran" class="scrolly button">Découvrir les parcours</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="race-tabs-bar">
+    <div class="container">
+      <div class="race-tabs">
+        <a href="#randonnees" class="race-tab tab-rando">
+          <span class="tab-distance">Rando</span>
+          <span class="tab-name">Randonnées</span>
+        </a>
+        <a href="#estran" class="race-tab tab-estran">
+          <span class="tab-distance">32 km</span>
+          <span class="tab-name">L'Estran</span>
+        </a>
+        <a href="#bernique" class="race-tab tab-bernique">
+          <span class="tab-distance">14 km</span>
+          <span class="tab-name">La Bernique</span>
+        </a>
+        <a href="#crevette" class="race-tab tab-crevette">
+          <span class="tab-distance">8 km</span>
+          <span class="tab-name">La Crevette</span>
+        </a>
+        <a href="#enfants" class="race-tab tab-enfants">
+          <span class="tab-distance">Kids</span>
+          <span class="tab-name">Enfants</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- L'Estran 32 km -->
+  <section id="estran" class="race-section race-estran">
+    <div class="container">
+      <div class="race-header">
+        <span class="race-badge badge-estran">32 km</span>
+        <h2>L'Estran</h2>
+        <p class="race-tagline">Le parcours mythique entre terre et mer</p>
+      </div>
+      <div class="race-layout">
+        <div class="race-col-map">
+          <div class="race-map-wrap">
+            <div id="map-estran" class="race-map"></div>
+            <div class="map-overlay-label">
+              <span class="icon solid fa-map-marker-alt"></span>
+              Chargez votre fichier GPX pour afficher le tracé
+            </div>
+          </div>
+        </div>
+        <div class="race-col-info">
+          <div class="info-pair">
+            <div class="info-card">
+              <span class="info-icon icon solid fa-flag"></span>
+              <h4>Départ</h4>
+              <p>
+                <strong>Port de La Roche Jaune</strong> (Plouguiel)<br>
+                11h45 — samedi 27 sept. 2026<br>
+                <span class="info-address">21 Rue du Port, 22220 Plouguiel</span><br>
+                <span class="info-gps">48°49'28.0"N 3°12'15.0"W</span>
+              </p>
+            </div>
+            <div class="info-card">
+              <span class="info-icon icon solid fa-trophy"></span>
+              <h4>Arrivée</h4>
+              <p>
+                <strong>Plage de Trestel</strong> (Trévou-Tréguignec)<br>
+                <span class="info-address">Rue de Trestel, 22660 Trévou-Tréguignec</span><br>
+                <span class="info-gps">48°49'16.1"N 3°21'04.4"W</span>
+              </p>
+            </div>
+          </div>
+          <div class="info-card info-card-description">
+            <h4>Le parcours</h4>
+            <p>
+              Depuis le petit port de la Roche Jaune, et après une mise en jambes verticale,
+              vous emprunterez l'estran en direction de la plage de Trestel à Trévou-Tréguignec.
+              Entre GR34 et estran, vous suivrez le tracé mythique du Trail de l'Estran.
+            </p>
+            <p>Au programme&nbsp;: sable, galets, vase, algues, rochers… Il y en a pour tous les goûts.</p>
+          </div>
+          <a href="docs/reglement.pdf" class="reglement-link" target="_blank" rel="noopener">
+            <span class="icon solid fa-file-pdf"></span> Règlement (PDF)
+          </a>
+        </div>
+      </div>
+      <div class="barriers-card">
+        <h3><span class="icon solid fa-clock"></span> Barrières horaires</h3>
+        <p>Il y en a 2 sur le 32km (Estran)&nbsp;:</p>
+        <div class="barriers-grid">
+          <div class="barrier">
+            <span class="barrier-km">KM 10.5</span>
+            <div>
+              <strong>Sortie du bois de l'Enfer</strong><br>
+              Passage maximum à <strong>13h15</strong>.
+              Les concurrents seront dirigés directement sur Trestel.
+            </div>
+          </div>
+          <div class="barrier">
+            <span class="barrier-km">KM 22</span>
+            <div>
+              <strong>Cale de Buguélès</strong><br>
+              Passage maximum à <strong>15h15</strong>.
+              Les concurrents seront dirigés directement au ravitaillement de Pellinec
+              (parcours raccourci de 3.5 km).
+            </div>
+          </div>
+        </div>
+        <p class="barrier-note">
+          Dans les 2 cas, les numéros de dossards seront enregistrés et
+          ne participeront pas au classement final de l'épreuve.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Bernique 14 km -->
+  <section id="bernique" class="race-section race-bernique">
+    <div class="container">
+      <div class="race-header">
+        <span class="race-badge badge-bernique">14 km</span>
+        <h2>La Bernique</h2>
+        <p class="race-tagline">Lancés comme des boulets de canon</p>
+      </div>
+      <div class="race-layout">
+        <div class="race-col-map">
+          <div class="race-map-wrap">
+            <div id="map-bernique" class="race-map"></div>
+            <div class="map-overlay-label">
+              <span class="icon solid fa-map-marker-alt"></span>
+              Chargez votre fichier GPX pour afficher le tracé
+            </div>
+          </div>
+        </div>
+        <div class="race-col-info">
+          <div class="info-pair">
+            <div class="info-card">
+              <span class="info-icon icon solid fa-flag"></span>
+              <h4>Départ</h4>
+              <p>
+                <strong>Parking de Pors Scaff</strong> (Plougrescant)<br>
+                12h00 — samedi 27 sept. 2026<br>
+                <span class="info-address">Parking de Pors Scaff, 22820 Plougrescant</span><br>
+                <span class="info-gps">48°51'17.8"N 3°14'50.0"W</span>
+              </p>
+            </div>
+            <div class="info-card">
+              <span class="info-icon icon solid fa-trophy"></span>
+              <h4>Arrivée</h4>
+              <p>
+                <strong>Plage de Trestel</strong> (Trévou-Tréguignec)<br>
+                <span class="info-address">Rue de Trestel, 22660 Trévou-Tréguignec</span><br>
+                <span class="info-gps">48°49'16.1"N 3°21'04.4"W</span>
+              </p>
+            </div>
+          </div>
+          <div class="info-card info-card-description">
+            <h4>Le parcours</h4>
+            <p>
+              Au départ de Pors Scaff, lancés comme des boulets de canon depuis le petit parking,
+              en quelques secondes, vous aurez les pieds dans le sable&nbsp;!
+              Rendez-vous sur la plage de Trestel à Trévou-Tréguignec,
+              mais attention à ne pas vous perdre au milieu des îles au large de Buguélès.
+            </p>
+          </div>
+          <a href="docs/reglement.pdf" class="reglement-link" target="_blank" rel="noopener">
+            <span class="icon solid fa-file-pdf"></span> Règlement (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Crevette 8 km -->
+  <section id="crevette" class="race-section race-crevette">
+    <div class="container">
+      <div class="race-header">
+        <span class="race-badge badge-crevette">8 km</span>
+        <h2>La Crevette</h2>
+        <p class="race-tagline">GR34 et estran, vos meilleurs alliés… ou vos pires ennemis</p>
+      </div>
+      <div class="race-layout">
+        <div class="race-col-map">
+          <div class="race-map-wrap">
+            <div id="map-crevette" class="race-map"></div>
+            <div class="map-overlay-label">
+              <span class="icon solid fa-map-marker-alt"></span>
+              Chargez votre fichier GPX pour afficher le tracé
+            </div>
+          </div>
+        </div>
+        <div class="race-col-info">
+          <div class="info-card">
+            <span class="info-icon icon solid fa-flag"></span>
+            <h4>Départ &amp; Arrivée</h4>
+            <p>
+              <strong>Plage de Trestel</strong> (Trévou-Tréguignec)<br>
+              11h30 — samedi 27 sept. 2026<br>
+              <span class="info-address">Rue de Trestel, 22660 Trévou-Tréguignec</span><br>
+              <span class="info-gps">48°49'16.1"N 3°21'04.4"W</span>
+            </p>
+          </div>
+          <div class="info-card info-card-description">
+            <h4>Le parcours</h4>
+            <p>
+              Un trail de 8 km en boucle. Le départ, en direction de Port-Blanc
+              jusqu'au Grand Hôtel, et l'arrivée ont lieu sur la plage de Trestel.
+              GR34 et estran seront vos meilleurs alliés… ou vos pires ennemis&nbsp;!
+            </p>
+          </div>
+          <a href="docs/reglement.pdf" class="reglement-link" target="_blank" rel="noopener">
+            <span class="icon solid fa-file-pdf"></span> Règlement (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Randonnées -->
+  <section id="randonnees" class="race-section race-rando">
+    <div class="container">
+      <div class="race-header">
+        <span class="race-badge badge-rando">Rando</span>
+        <h2>Les randonnées</h2>
+        <p class="race-tagline">Profitez des paysages de l'estran à votre rythme</p>
+      </div>
+      <div class="centered-description">
+        <p>
+          Des parcours de randonnée sont proposés le jour de l'événement
+          pour découvrir le littoral breton sans la compétition.
+          Plus de détails à venir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course enfants -->
+  <section id="enfants" class="race-section race-enfants">
+    <div class="container">
+      <div class="race-header">
+        <span class="race-badge badge-enfants">Kids</span>
+        <h2>Course enfants</h2>
+        <p class="race-tagline">Les petits coureurs ont aussi leur épreuve&nbsp;!</p>
+      </div>
+      <div class="centered-description">
+        <p>
+          Une course dédiée aux enfants sera organisée sur la plage de Trestel.
+          Plus de détails à venir.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Règlement -->
+  <section id="reglement" class="reglement-section">
+    <div class="container">
+      <h2>Règlement</h2>
+      <p class="reglement-text">
+        Le règlement des courses est disponible en téléchargement.
+        Chaque participant est tenu d'en prendre connaissance avant le départ.
+      </p>
+      <ul class="actions special">
+        <li>
+          <a href="docs/reglement.pdf" class="button" target="_blank" rel="noopener">
+            <span class="icon solid fa-file-pdf"></span>
+            Télécharger le règlement (PDF)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer (injecté par components/footer.js) -->
+  <section id="footer"></section>
+
+  <!-- Scripts -->
+  <script src="components/nav.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/site.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+  <script src="js/maps.js"></script>
+
+</body>
+
+</html>
