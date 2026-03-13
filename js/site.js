@@ -33,7 +33,8 @@
     /* Trouver le hero de la page (header sur index, epreuves-hero sur épreuves, etc.) */
     const hero =
       document.getElementById("header") ||
-      document.querySelector(".epreuves-hero");
+      document.querySelector(".epreuves-hero") ||
+      document.querySelector(".page-hero");
 
     if (!hero) {
       /* Pas de hero → toujours scrolled */

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Inscriptions — Trail de l'Estran</title>
+  <meta name="description"
+    content="Inscrivez-vous au Trail de l'Estran : L'Estran 32km, La Bernique 14km, La Crevette 8km. Places limitées !">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="is-preload" data-page="inscription">
+
+  <!-- Nav -->
+  <nav id="nav"></nav>
+
+  <!-- Hero -->
+  <section id="top" class="page-hero">
+    <div class="inner">
+      <h1>Inscriptions</h1>
+      <p>
+        Rejoignez-nous le 27 septembre 2026 pour une aventure unique
+        entre terre et mer sur l'estran breton&nbsp;!
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Ouverture -->
+  <section class="insc-section insc-opening">
+    <div class="container">
+      <div class="insc-date-banner">
+        <span class="icon solid fa-calendar"></span>
+        <div>
+          <h2>Ouverture des inscriptions</h2>
+          <p class="insc-date">1<sup>er</sup> mai 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Les 3 courses -->
+  <section class="insc-section insc-races">
+    <div class="container">
+      <h2 class="section-title">Choisissez votre épreuve</h2>
+      <p class="section-subtitle">Nombre de places limité — ne tardez pas&nbsp;!</p>
+
+      <div class="insc-cards">
+        <div class="insc-card insc-card-estran">
+          <div class="insc-card-accent"></div>
+          <span class="insc-card-badge">32 km</span>
+          <h3>L'Estran</h3>
+          <div class="insc-card-places">
+            <span class="insc-places-num">400</span>
+            <span class="insc-places-label">places</span>
+          </div>
+          <p>Le parcours mythique entre terre et mer. Sable, galets, vase, algues, rochers…</p>
+        </div>
+
+        <div class="insc-card insc-card-bernique">
+          <div class="insc-card-accent"></div>
+          <span class="insc-card-badge">14 km</span>
+          <h3>La Bernique</h3>
+          <div class="insc-card-places">
+            <span class="insc-places-num">400</span>
+            <span class="insc-places-label">places</span>
+          </div>
+          <p>Lancés comme des boulets de canon, les pieds dans le sable en quelques secondes.</p>
+        </div>
+
+        <div class="insc-card insc-card-crevette">
+          <div class="insc-card-accent"></div>
+          <span class="insc-card-badge">8 km</span>
+          <h3>La Crevette</h3>
+          <div class="insc-card-places">
+            <span class="insc-places-num">200</span>
+            <span class="insc-places-label">places</span>
+          </div>
+          <p>GR34 et estran seront vos meilleurs alliés… ou vos pires ennemis&nbsp;!</p>
+        </div>
+      </div>
+
+      <div class="insc-cta">
+        <a href="https://estran.adeorun.com/" class="button primary" target="_blank" rel="noopener">S'inscrire</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bénévoles -->
+  <section class="insc-section insc-benevole">
+    <div class="container">
+      <div class="benevole-layout">
+
+        <div class="benevole-text">
+          <h2>Vous ne voulez ou ne pouvez pas courir cette année&nbsp;?</h2>
+          <h3>Devenez bénévole&nbsp;!</h3>
+          <p>
+            Le Trail de l'Estran ne pourrait pas exister sans ses bénévoles.
+            Rejoignez l'équipe et vivez la course de l'intérieur&nbsp;:
+            ravitaillements, signalisation, accueil, sécurité…
+            Une belle journée solidaire vous attend&nbsp;!
+          </p>
+        </div>
+
+        <div class="benevole-form-wrap">
+          <form id="benevole-form" method="POST" action="https://formspree.io/f/TON_ID" class="benevole-card">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Nom" required>
+              <input type="text" name="prenom" placeholder="Prénom" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Téléphone">
+            <textarea name="message" rows="3" placeholder="Un mot ? Une préférence de poste ?"></textarea>
+            <input type="hidden" name="_subject" value="Nouveau bénévole — Trail de l'Estran">
+            <div class="form-actions">
+              <button type="submit" class="button send-button">Je deviens bénévole</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <section id="footer"></section>
+
+  <!-- Scripts -->
+  <script src="components/nav.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="js/site.js"></script>
+
+</body>
+
+</html>
