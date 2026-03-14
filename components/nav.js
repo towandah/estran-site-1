@@ -19,10 +19,9 @@ function loadNav() {
         <li class="${page === "epreuves" ? "nav-page-active" : ""}"><a href="epreuves.html">Les épreuves</a></li>
         <li class="${page === "inscription" ? "nav-page-active" : ""}"><a href="inscription.html">Inscription</a></li>
         <li class="${page === "infos" ? "nav-page-active" : ""}"><a href="infos.html">Infos pratiques</a></li>
-<li class="${page === "archives" ? "nav-page-active" : ""}"><a href="archives.html">Archives</a></li>
-        <li><a href="index.html#partenaires">Partenaires</a></li>
-        <li><a href="index.html#solidarite">Le challenge de la solidarité</a></li>
-      </ul>
+        <li class="${page === "archives" ? "nav-page-active" : ""}"><a href="archives.html">Archives</a></li>
+        <li class="${page === "solidarite" ? "nav-page-active" : ""}"><a href="challenge.html">Le challenge de la solidarité</a></li>     
+         </ul>
     </div>
   `;
 

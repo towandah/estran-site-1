@@ -120,7 +120,9 @@
 .fa-play::before {
   content: "\f04b";
 }
-
+.fa-heart::before {
+  content: "\f004";
+}
 /* ==============================
    2. RESET & BASE
    ============================== */
@@ -2094,7 +2096,205 @@ textarea::placeholder {
 }
 
 /* ==============================
-   22. ANIMATIONS
+   22. PAGE CHALLENGE SOLIDARITÉ
+   ============================== */
+
+.solida-intro {
+  padding: 4em 0 3em;
+  background: var(--bg-light);
+  text-align: center;
+}
+.solida-logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.solida-logo {
+  max-width: 16em;
+  height: auto;
+}
+.solida-logo-placeholder .icon::before {
+  font-size: 2em;
+}
+.solida-logo-placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.solida-catchphrase {
+  max-width: 38em;
+  margin: 0 auto;
+  font-size: 1.15em;
+  line-height: 1.7;
+  color: var(--deep);
+  font-weight: 400;
+}
+
+.solida-section {
+  padding: 4em 0;
+  background: var(--bg-light);
+}
+.solida-section-alt {
+  background: var(--bg-sand);
+}
+
+.solida-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4em;
+}
+.solida-event-card {
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  padding: 1.6em 1.4em;
+  text-align: center;
+  border: 1px solid rgba(34, 54, 81, 0.06);
+  border-top: 4px solid var(--pearl);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.solida-event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.solida-event-estran {
+  border-top-color: var(--almond);
+  background: rgba(209, 149, 114, 0.06);
+}
+
+.solida-event-date {
+  display: inline-block;
+  padding: 0.2em 1em;
+  background: var(--deep);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.75em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6em;
+}
+.solida-event-card h3 {
+  font-size: 1.1em;
+  margin: 0 0 0.4em 0;
+}
+.solida-event-lieu {
+  font-size: 0.88em;
+  opacity: 0.65;
+  margin: 0;
+}
+.solida-event-lieu .icon::before {
+  color: var(--almond);
+  margin-right: 0.3em;
+  font-size: 0.85em;
+}
+
+/* Règlement */
+.solida-reglement {
+  background: var(--bg-light);
+}
+.solida-rules {
+  max-width: 52em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.solida-rule {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  padding: 1.4em 1.6em;
+  background: var(--bg-sand);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--almond);
+}
+.solida-rule-num {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 999px;
+  background: var(--almond);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1em;
+}
+.solida-rule h4 {
+  margin: 0 0 0.4em 0;
+  font-size: 1.05em;
+}
+.solida-rule p {
+  font-size: 0.9em;
+  line-height: 1.65;
+  margin: 0 0 0.6em 0;
+}
+.solida-rule p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .solida-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 736px) {
+  .solida-events-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .solida-rule {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ==============================
+   23. Mentions légales
+   ============================== */
+
+.mentions-section {
+  padding: 4em 0 5em;
+  background: var(--bg-light);
+}
+.mentions-content {
+  max-width: 48em;
+  margin: 0 auto;
+}
+.mentions-content h2 {
+  font-size: 1.15em;
+  margin: 2em 0 0.6em 0;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--pearl);
+}
+.mentions-content h2:first-child {
+  margin-top: 0;
+}
+.mentions-content p {
+  font-size: 0.92em;
+  line-height: 1.7;
+}
+.mentions-content a {
+  color: var(--almond);
+}
+.mentions-placeholder {
+  display: inline-block;
+  padding: 0.1em 0.6em;
+  background: rgba(209, 149, 114, 0.15);
+  border: 1px dashed var(--almond);
+  border-radius: 4px;
+  color: var(--almond);
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+/* ==============================
+   24. ANIMATIONS
    ============================== */
 
 .race-header,
@@ -2148,7 +2348,7 @@ textarea::placeholder {
 }
 
 /* ==============================
-   23. RESPONSIVE
+   25. RESPONSIVE
    ============================== */
 
 @media screen and (max-width: 980px) {
@@ -2221,22 +2421,23 @@ textarea::placeholder {
   }
 
   #nav ul {
-    display: inline-flex;
-    border-radius: 0.45em;
-    padding: 0 1.8em;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--almond);
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    padding: 0.6em 0;
     margin: 0;
     list-style: none;
-    background: transparent;
-    box-shadow:
-      inset 0 0 1px 1px rgba(255, 255, 255, 0.25),
-      0 12px 30px rgba(0, 0, 0, 0.3);
-    transition:
-      background-color 0.35s ease,
-      box-shadow 0.35s ease;
   }
   #nav.nav-open ul {
     display: flex;
   }
+
   #nav.scrolled .nav-inner {
     background: var(--almond);
   }
@@ -2300,7 +2501,9 @@ textarea::placeholder {
     align-items: center;
   }
   .contact-block {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
   .contact-block div {
     text-align: center;
@@ -2345,6 +2548,13 @@ textarea::placeholder {
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
+  }
+  #header,
+  .epreuves-hero,
+  .page-hero,
+  .section-event,
+  #footer {
+    background-attachment: scroll;
   }
 }
 
