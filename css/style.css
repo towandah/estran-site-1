@@ -374,6 +374,27 @@ textarea::placeholder {
    6. NAV
    ============================== */
 
+.page-logo-link {
+  position: fixed;
+  top: 0.5em;
+  left: 40px !important;
+  z-index: 1001;
+  display: inline-block;
+  line-height: 0;
+  padding: 0;
+  font-size: 0;
+}
+.page-logo {
+  width: 150px;
+  height: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+.page-logo:hover {
+  opacity: 1;
+}
+
 #nav {
   position: fixed;
   top: 1.6em;
@@ -642,6 +663,15 @@ textarea::placeholder {
   max-width: 220px;
   height: auto;
   margin-bottom: 0.3em;
+}
+
+.section-flag {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0 auto 0.8em auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 /* ==============================
@@ -2552,7 +2582,13 @@ body[data-page="inscription"] .page-hero {
   body {
     font-size: 15px;
   }
-
+  .page-logo-link {
+    top: 0.5em;
+    left: 2.5em;
+  }
+  .page-logo {
+    width: 80px;
+  }
   /* Hamburger visible */
   .nav-toggle {
     display: block;
